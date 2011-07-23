@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    XWG Copyright (C) 2011 Alexander Voigt
+
+    This file is part of XWG.
+
+    XWG is free software: you can redistribute it and/or
+    modify it under the terms of the GNU General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    XWG is distributed in the hope that it will be
+    useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+    of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with XWG.  If not, see
+    <http://www.gnu.org/licenses/>.
+-->
+
+<!--
+    This XSLT file creates a XHTML 1.0 Strict file with a bread
+    crumb, a dynamic menu and the content from the data element of
+    the xml file.
+-->
+
 <xsl:stylesheet version="1.0" 
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns="http://www.w3.org/1999/xhtml">
-
-  <!--
-      This xslt file creates a XHTML 1.0 Strict file with a bread
-      crumb, a dynamic menu and the content from the data element of
-      the xml file.
-  -->
 
   <xsl:output method="xml" version="1.0" encoding="utf-8" 
 	      doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -29,7 +50,7 @@
       </head>
       <body>
 	<div id="head">
-	  <h1 id="headline"><xsl:text>My Website</xsl:text></h1>
+	  <h1 id="headline"><xsl:text>Headline</xsl:text></h1>
 	</div>
 
 	<!-- Create bread crumb -->

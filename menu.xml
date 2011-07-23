@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE menu SYSTEM "menu.dtd">
 
+<!--
+    Here the user specifies how to arrange the sites in the menu.
+
+    The menu root tag is 'menu'.
+
+    A menu item is represented by the 'item' tag.
+    An alone standing item represents a menu entry without sub-entries,
+    e.g.
+
+       <item href="index.xml" text="Home"/>
+
+    The attribute 'href' points to the page which will be shown if
+    the menu item (link) is followed.  The 'text' attribut contains
+    the menu item caption, i.e. "Home" in the above example.
+
+    Sub-menus can be created by putting further item tags into
+    a menu item, e.g.
+
+       <item href="page2.xml" text="Page 2">
+         <item href="subpage1.xml" text="Sub page 1"/>
+         <item href="subpage2.xml" text="Sub page 2"/>
+       </item>
+
+    Here "Page 2" is a menu item with two sub items "Sub page 1" and
+    "Sub page 2".
+-->
+
 <menu xmlns:menu="menu-namespace">
   <item href="index.xml" text="Home"/>
   <item href="page1.xml" text="Page 1"/>
