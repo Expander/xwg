@@ -59,7 +59,7 @@
 	  <xsl:copy-of select="/*[1][name()='data']/*"/>
 	</div>
 
-	<!-- Create the menu -->
+	<!-- Create the footer -->
 	<div id="foot">
 	  <p>written by Author</p>
 	</div>
