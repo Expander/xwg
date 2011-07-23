@@ -59,6 +59,11 @@
 	  <xsl:copy-of select="/*[1][name()='data']/*"/>
 	</div>
 
+	<!-- Create the menu -->
+	<div id="foot">
+	  <p>written by Author</p>
+	</div>
+
       </body>
     </html>
   </xsl:template>
