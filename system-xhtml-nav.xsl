@@ -3,13 +3,18 @@
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns="http://www.w3.org/1999/xhtml">
 
+  <!--
+      This xslt file creates a XHTML 1.1 file with a bread crumb, a
+      dynamic menu and the content from the data element of the xml
+      file.
+  -->
+
   <xsl:output method="xml" version="1.0" encoding="utf-8" 
 	      doctype-public="-//W3C//DTD XHTML 1.1//EN"
 	      doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"
 	      omit-xml-declaration="no"
 	      indent="yes"/>
 
-  <!-- <xsl:variable name="filename" select="/data/@filename"/> -->
   <xsl:variable name="filename" select="/*[1][name()='data']/@filename"/>
   <xsl:template match="/">
     <html version="-//W3C//DTD XHTML 1.1//EN"
@@ -30,27 +35,35 @@
 	<div id="head">
 	  <h1 id="headline"><xsl:text>My Website</xsl:text></h1>
 	</div>
-<!-- 	<div id="breadcrumb"> -->
-<!-- 	  <xsl:text>you are here: </xsl:text> -->
-<!-- 	  <xsl:for-each select="document('menu.xml')//thema[@href = $filename]/ancestor::thema"> -->
-<!-- 	    <a href="{@href}"><xsl:value-of select="@text"/></a> -->
-<!-- 	    <xsl:text> : </xsl:text> -->
-<!-- 	  </xsl:for-each> -->
-<!-- 	  <xsl:value-of select="document('menu.xml')//thema[@href = $filename]/@text"/> -->
-<!-- 	</div> -->
+
+	<!-- Create bread crumb -->
+	<div id="breadcrumb">
+	  <xsl:text>you are here: </xsl:text>
+	  <xsl:for-each select="document('menu.xml')//thema[@href = $filename]/ancestor::thema">
+	    <a href="{@href}"><xsl:value-of select="@text"/></a>
+	    <xsl:text> : </xsl:text>
+	  </xsl:for-each>
+	  <xsl:value-of select="document('menu.xml')//thema[@href = $filename]/@text"/>
+	</div>
+
+	<!-- Create the menu -->
 	<div id="menu">
 	  <h2 id="nav-headline">Navigation:</h2>
 	  <ul id="navigation">
 	    <xsl:apply-templates select="document('menu.xml')/menu/thema"/>
 	  </ul>
 	</div>
+
+	<!-- Copy the content in the data element here -->
 	<div id="content">
 	  <xsl:copy-of select="/*[1][name()='data']/*"/>
 	</div>
+
       </body>
     </html>
   </xsl:template>
 
+  <!-- menu template -->
   <xsl:template match="thema">
     <xsl:choose>
       <xsl:when test="descendant::thema[@href = $filename]">
