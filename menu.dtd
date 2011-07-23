@@ -1,9 +1,9 @@
-<!ELEMENT menu (thema)*> 
-<!ELEMENT thema (thema)*>
+<!ELEMENT menu (item)*>
+<!ELEMENT item (item)*>
 <!ATTLIST menu
 	  xmlns:menu CDATA #REQUIRED
 >
-<!ATTLIST thema
+<!ATTLIST item
 	  href CDATA #REQUIRED
 	  text CDATA #REQUIRED
 >

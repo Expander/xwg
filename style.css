@@ -1,43 +1,57 @@
 
 html, body { background-color:#DDDDDD; }
 
-h1#headline{ padding:0 0.5em 0 0em;
-             margin:0.5em;
-             font-size:x-large; }
-
-h2#nav-headline{ margin:0; padding:0;
-                 font-size:small;
-                 font-weight:bold; }
-
+/* ************************************************** */
+/* page header */
 #head { margin:0 0 0.5em 0;
         background-color:#FFFFFF;
         border:1px solid #AAAAAA; }
 
+/* head line */
+h1#headline{ padding:0 0.5em 0 0em;
+             margin:0.5em;
+             font-size:x-large; }
+
+/* ************************************************** */
+/* bread crumb */
 #breadcrumb { padding:0.5em 0 0.5em 1em;
               font-size:small;
               margin-bottom:0.5em;
               background-color:#FFFFFF;
               border:1px solid #AAAAAA; }
 
+/* ************************************************** */
+/* navigation menu */
 #menu { float:left;
         width:8em;
         padding:1em;
         background-color:#FFFFFF;
         border:1px solid #AAAAAA; }
 
+/* description of navigation menu */
+h2#nav-headline{ margin:0; padding:0;
+                 font-size:small;
+                 font-weight:bold; }
+
+/* navigation menu item list */
+ul#navigation { margin:0.5em 0 0 1em;
+                padding:0; }
+
+/* menu item */
+.item { font-size:90%;
+        font-style:normal; }
+
+/* selected menu item */
+#selected-item { font-size:90%; }
+
+/* ************************************************** */
+/* page content */
 #content { margin-left:10.5em;
            background-color:#FFFFFF;
            border:1px solid #AAAAAA; 
            padding: 0.5em 1em 0 1em; }
 
+/* ************************************************** */
+/* page footer */
 #foot{ clear:both; 
        text-align:right; }
-
-/* navigation menu */
-.thema { font-size:90%;
-         font-style:normal; }
-
-#thema-aktuell { font-size:90%; }
-
-ul#navigation { margin:0.5em 0 0 1em;
-                padding:0; }

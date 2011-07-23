@@ -2,11 +2,11 @@
 <!DOCTYPE menu SYSTEM "menu.dtd">
 
 <menu xmlns:menu="menu-namespace">
-  <thema href="index.xml" text="Home"/>
-  <thema href="page1.xml" text="Page 1"/>
-  <thema href="page2.xml" text="Page 2">
-    <thema href="subpage1.xml" text="Sub page 1"/>
-    <thema href="subpage2.xml" text="Sub page 2"/>
-  </thema>
-  <thema href="page3.xml" text="Page 3"/>
+  <item href="index.xml" text="Home"/>
+  <item href="page1.xml" text="Page 1"/>
+  <item href="page2.xml" text="Page 2">
+    <item href="subpage1.xml" text="Sub page 1"/>
+    <item href="subpage2.xml" text="Sub page 2"/>
+  </item>
+  <item href="page3.xml" text="Page 3"/>
 </menu>
