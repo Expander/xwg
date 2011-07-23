@@ -1,8 +1,84 @@
-How to build the site
-=====================
+=====
+ XWG
+=====
+
+XWG is a simple web site generator based on XSLT.  It creates (X)HTML
+pages from XML files together with a menu tree and bread crumb line.
+
+Requirements
+============
+
+In order to build the static (X)HTML sites a XSLT 1.0 processor is
+needed.  The authors recommend xsltproc
+(xmlsoft.org/XSLT/xsltproc.html).
+
+How to build the static sites
+=============================
 
 Every XHTML file is generated from the corresponding XML file, which
-has the same file name but .xml as file name ending instead of .xhtml.
-To update/ create the XHTML files run
+has the same file name but .xml as file name extension instead of
+.xhtml .  To create the static XHTML files run
 
   $ make
+
+This uses the XSLT processor and the chosen XSLT style sheet to
+transform every .xml file into a .(x)html file.  See the Makefile for
+details on the output format and the used XSLT style sheet.
+
+Instead of using an external XSLT processor to generate the sites one
+can also just view the sites using a web browser with integrated XSLT
+1.0 processor, e.g. firefox.  In order to do so simply open index.xml
+(or any other .xml file) with your browser.  In this case the default
+style sheet, which is written in the XML file, is used.
+
+Adding XML pages
+================
+
+Any XML file contains a 'data' tag whose content is copied into the
+output (X)HTML page.  Therefore the 'data' tag has to contain valid
+(X)HTML code.  Furthermore the 'data' tag must have a 'filename'
+attribute containing the name of this .xml file.
+
+For example, a simple XML file 'page.xml' might look like this:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/xsl" href="system-xhtml11.xsl" ?>
+   <data filename="page.xml" xmlns="http://www.w3.org/1999/xhtml">
+     <h2>Page</h2>
+     <p>
+       This is a page.
+     </p>
+   </data>
+
+Here 'system-xhtml11.xsl' is the default XSLT style sheet and
+xmlns="http://www.w3.org/1999/xhtml" is the XHTML namespace which is
+needed in case of an XHTML output file.
+
+Menu tree
+=========
+
+The file menu.xml contains the information on the menu structure,
+i.e. how the sites are arranged to each other.  All pages that should
+appear in the menu must be listed here.  See menu.xml for more details
+and an example.
+
+COPYING
+=======
+
+XWG Copyright (C) 2011 Alexander Voigt
+<Alexander.Voigt@physik.tu-dresden.de>
+
+This file is part of XWG.
+
+XWG is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+XWG is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with XWG.  If not, see <http://www.gnu.org/licenses/>.
