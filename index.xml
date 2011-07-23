@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="system-xhtml-nav.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="system-xhtml.xsl" ?>
 <data filename="index.xml" xmlns="http://www.w3.org/1999/xhtml">
   <h2>Index page</h2>
   <p>
-    <a href="http://validator.w3.org/check?uri=referer">
-      <img style="border:0;width:88px;height:31px"
-	   src="http://www.w3.org/Icons/valid-xhtml11"
-           alt="Valid XHTML 1.1" />
-    </a>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-      <img style="border:0;width:88px;height:31px"
-           src="http://jigsaw.w3.org/css-validator/images/vcss"
-           alt="Valid CSS" />
-    </a>
+    This is the index page.
   </p>
 </data>

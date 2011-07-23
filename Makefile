@@ -1,6 +1,6 @@
 
 OUTPUTFORMAT = xhtml
-XSLTFILE     = system-xhtml-nav.xsl
+XSLTFILE     = system-xhtml.xsl
 
 # generate list of output files from all existing .xml files
 OUTPUTFILES  = $(foreach file, $(basename $(wildcard *.xml)), $(file).$(OUTPUTFORMAT))
