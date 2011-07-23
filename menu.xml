@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "menu.dtd">
+
+<menu xmlns:menu="menu-namespace">
+  <thema href="index.xml" text="Home"/>
+  <thema href="page1.xml" text="Page 1"/>
+  <thema href="page2.xml" text="Page 2">
+    <thema href="subpage1.xml" text="Sub page 1"/>
+    <thema href="subpage2.xml" text="Sub page 2"/>
+  </thema>
+  <thema href="page3.xml" text="Page 3"/>
+</menu>

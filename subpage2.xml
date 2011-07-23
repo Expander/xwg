@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="system-xhtml-nav.xsl" ?>
+<data filename="subpage2.xml" xmlns="http://www.w3.org/1999/xhtml">
+  <h2>Sub page 2</h2>
+  <p>
+    This is sub page 2
+  </p>
+</data>

@@ -1,0 +1,9 @@
+<!ELEMENT menu (thema)*> 
+<!ELEMENT thema (thema)*>
+<!ATTLIST menu
+	  xmlns:menu CDATA #REQUIRED
+>
+<!ATTLIST thema
+	  href CDATA #REQUIRED
+	  text CDATA #REQUIRED
+>

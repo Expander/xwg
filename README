@@ -1,0 +1,8 @@
+How to build the site
+=====================
+
+Every XHTML file is generated from the corresponding XML file, which
+has the same file name but .xml as file name ending instead of .xhtml.
+To update/ create the XHTML files run
+
+  $ make
