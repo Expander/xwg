@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="system-xhtml11.xsl" ?>
-<data filename="page1.xml" xmlns="http://www.w3.org/1999/xhtml">
+<data filename="page1.xml" xmlns="http://www.w3.org/1999/xhtml"
+      keywords="page1">
   <h2>Page 1</h2>
   <p>
     This is page 1

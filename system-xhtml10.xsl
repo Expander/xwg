@@ -37,6 +37,7 @@
 	      indent="yes"/>
 
   <xsl:variable name="filename" select="/*[1][name()='data']/@filename"/>
+  <xsl:variable name="extraKeywords" select="/*[1][name()='data']/@keywords"/>
   <xsl:template match="/">
     <html xml:lang="en"
 	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -44,7 +45,7 @@
 	<title>My Website</title>
 	<meta name="author" content="Author"/>
 	<meta name="description" content="My Website"/>
-	<meta name="keywords" content="XSLT"/>
+	<meta name="keywords" content="XSLT {$extraKeywords}"/>
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
       </head>
